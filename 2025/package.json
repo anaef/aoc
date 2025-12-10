@@ -4,6 +4,7 @@
     "@types/node": "^24.7.0"
   },
   "dependencies": {
-    "@datastructures-js/queue": "^4.3.0"
+    "@datastructures-js/queue": "^4.3.0",
+    "highs": "^1.8.0"
   }
 }
