@@ -92,6 +92,20 @@ function rectWithinPolygon (loc1: Point, loc2: Point, polygon: Array<Edge>): boo
 			}
 		}
 	}
+	const xMin = Math.min(loc1.x, loc2.x)
+	const xMax = Math.max(loc1.x, loc2.x)
+	const yMin = Math.min(loc1.y, loc2.y)
+	const yMax = Math.max(loc1.y, loc2.y)
+	for (let x = xMin + 1; x < xMax; x++) {
+		if (!pointInPolygon({ x, y: yMin }, polygon) || !pointInPolygon({ x, y: yMax }, polygon)) {
+			return false
+		}
+	}
+	for (let y = yMin + 1; y < yMax; y++) {
+		if (!pointInPolygon({ x: xMin, y }, polygon) || !pointInPolygon({ x: xMax, y }, polygon)) {
+			return false
+		}
+	}
 	return true
 }
 
