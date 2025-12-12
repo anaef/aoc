@@ -5,6 +5,7 @@
   },
   "dependencies": {
     "@datastructures-js/queue": "^4.3.0",
-    "highs": "^1.8.0"
+    "highs": "^1.8.0",
+    "z3-solver": "^4.15.4"
   }
 }
